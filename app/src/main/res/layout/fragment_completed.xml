@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:clipToPadding="false"
+    android:focusable="auto"
+    tools:context=".CompletedFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTou1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="16dp"
+                app:cardBackgroundColor="#0A0840"
+                app:cardElevation="5dp"
+                app:contentPaddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="170dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="185dp"
+                    android:background="#5C7B78AE"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:text="                  Austrailia"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="130dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="150dp"
+                    android:background="#5C7B78AE"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:text="         11 Jun - 1 9 Jul"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="320dp"
+                    android:layout_marginTop="80dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:foreground="@mipmap/ic_imageaus_foreground"
+                        app:cardCornerRadius="25dp" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="80dp"
+                    android:foreground="@mipmap/ic_imageuk_round"
+                    app:cardCornerRadius="25dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="160dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#887B78AE"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:text="          Ashes Cup"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTou2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="16dp"
+                app:cardBackgroundColor="#0A0840"
+                app:cardElevation="5dp"
+                app:contentPaddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="170dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="185dp"
+                    android:background="#5C7B78AE"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:text="         Sri Lanka and India"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="130dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="150dp"
+                    android:background="#5C7B78AE"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:text="      23 May - 1 9 Jun"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="320dp"
+                    android:layout_marginTop="180dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:foreground="@drawable/slflag"
+                        app:cardCornerRadius="25dp">
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="320dp"
+                    android:layout_marginTop="120dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:foreground="@mipmap/ic_imagewi_foreground"
+                        app:cardCornerRadius="25dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="320dp"
+                    android:layout_marginTop="60dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:foreground="@mipmap/ic_imageuk_round"
+                        app:cardCornerRadius="25dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="320dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:foreground="@mipmap/ic_imagesa_foreground"
+                        app:cardCornerRadius="25dp" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:foreground="@mipmap/ic_imageaus_foreground"
+                    app:cardCornerRadius="25dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="70dp"
+                    android:foreground="@mipmap/ic_imageind_round"
+                    app:cardCornerRadius="25dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="130dp"
+                    android:foreground="@mipmap/ic_imagenz_round"
+                    app:cardCornerRadius="25dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="190dp"
+                    android:foreground="@mipmap/ic_imagepak_foreground"
+                    app:cardCornerRadius="25dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="160dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#887B78AE"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:text="      T20 World Cup"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTou3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="16dp"
+                app:cardBackgroundColor="#0A0840"
+                app:cardElevation="5dp"
+                app:contentPaddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="170dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="185dp"
+                    android:background="#5C7B78AE"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:text="                  Austrailia"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="130dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="150dp"
+                    android:background="#5C7B78AE"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:text="         11 Jul - 1 9 Aug"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="320dp"
+                    android:layout_marginTop="80dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:foreground="@drawable/slflag"
+                        app:cardCornerRadius="25dp" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="80dp"
+                    android:foreground="@mipmap/ic_imageuk_round"
+                    app:cardCornerRadius="25dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="160dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#887B78AE"
+                    android:fontFamily="@font/roboto_slab_thin"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:text="       SL Tour of ENG"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
