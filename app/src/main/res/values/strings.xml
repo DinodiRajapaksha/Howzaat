@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Tickets and Merch</string>
+    <string name="spinner_stadium_blocks">A Upper</string>
+    <string-array name="block_types">
+        <item>A Upper</item>
+        <item>B Upper</item>
+        <item>C Upper</item>
+        <item>D Upper</item>
+        <item>A Lower</item>
+        <item>B Lower</item>
+        <item>C Lower</item>
+        <item>D Lower</item>
+        <item>Grand Stand</item>
+    </string-array>
+    <string name="spinner_stadium_blocks2">B Upper</string>
+    <string-array name="block_types2">
+        <item>B Upper</item>
+        <item>A Upper</item>
+        <item>C Upper</item>
+        <item>D Upper</item>
+        <item>A Lower</item>
+        <item>B Lower</item>
+        <item>C Lower</item>
+        <item>D Lower</item>
+        <item>Grand Stand</item>
+    </string-array>
+    <string name="SpinnerBowlerBat">Batting</string>
+    <string name="tabitem1">Tickets</string>
+    <string name="tabitem2">MERCHANDISE</string>
+    <string name="block1">Number of Tickets</string>
+    <string name="buybtn1">BUY</string>
+    <string name="title">MERCHANDISE</string>
+    <string name="TSHIRT1">T-Shirt</string>
+    <string name="country1">England</string>
+    <string name="qty1">Quantity :</string>
+    <string name="qtyinput1">0</string>
+    <string name="cap1">Cap</string>
+    <string name="price1">LKR2500.00</string>
+    <string name="price2">LKR1500.00</string>
+    <string name="price3">LKR2000.00</string>
+    <string name="price4">LKR1000.00</string>
+
+</resources>

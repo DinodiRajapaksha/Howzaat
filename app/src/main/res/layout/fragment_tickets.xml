@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnticket_pay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFEFA"
+    tools:context=".TicketsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="546dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Tickets"
+                android:layout_width="209dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:text="TICKETS"
+                android:textAlignment="center"
+                android:textColor="#040404"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/venue_816" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="A/B Upper- LKR1500.00"
+                    android:textColor="#070707"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="A/B Lower- LKR2000.00"
+                    android:textColor="#070707"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="C/D Upper- LKR1500.00"
+                    android:textColor="#070707"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="C/D Lower- LKR1500.00"
+                    android:textColor="#070707"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Grand Stand- LKR5000.00"
+                    android:textColor="#070707"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/block1"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#00040404"
+                            android:backgroundTint="#090808"
+                            android:entries="@array/block_types"
+                            android:gravity="left"
+                            android:outlineProvider="background"
+                            android:overScrollMode="ifContentScrolls"
+                            android:prompt="@string/spinner_stadium_blocks"
+                            android:textColor="#F4FF81"
+                            android:textSize="40sp" />
+
+                        <EditText
+                            android:id="@+id/noOfTickets1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="@string/block1"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/block2"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#00040404"
+                            android:backgroundTint="#090808"
+                            android:entries="@array/block_types2"
+                            android:gravity="left"
+                            android:outlineProvider="background"
+                            android:overScrollMode="ifContentScrolls"
+                            android:prompt="@string/spinner_stadium_blocks2"
+                            android:textColor="#F4FF81"
+                            android:textSize="30sp" />
+
+                        <EditText
+                            android:id="@+id/noOfTickets2"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="@string/block1"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#D9B011"
+                        android:text="@string/buybtn1"
+                        android:textSize="25dp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
