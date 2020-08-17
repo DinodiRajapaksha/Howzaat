@@ -1,71 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="409dp"
         android:layout_height="0dp"
         android:layout_marginBottom="675dp"
-        android:background="#091C60"
+        android:background="#FF8800"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+         />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/TabLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#1A2A65"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:tabIndicatorColor="#FFEB3B"
-        app:tabSelectedTextColor="@android:color/white"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:tabTextColor="@android:color/black"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="56dp">
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabCompleted"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/completed" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabOngoing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ongoing" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabUpcoming"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/upcoming" />
-    </com.google.android.material.tabs.TabLayout>
-
-
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/ViewPagerTou"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.tabs.TabLayout
-            android:layout_gravity = "top"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </androidx.viewpager.widget.ViewPager>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    app:cardBackgroundColor="#A8FFBB00"
+                    app:cardCornerRadius="5dp">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#80FFFFFF"
+                        android:text="Add New"
+                        android:textAllCaps="false" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="140dp"
+                        android:text="      Tournaments"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    app:cardBackgroundColor="#DEFF6F"
+                    app:cardCornerRadius="5dp">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#80FFFFFF"
+                        android:text="Add New"
+                        android:textAllCaps="false" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="140dp"
+                        android:text="           Matches"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="#DEFF6F"
+                    app:cardCornerRadius="5dp">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#80FFFFFF"
+                        android:text="Add New"
+                        android:textAllCaps="false" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="140dp"
+                        android:text="      Merchandise"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="#A8FFBB00"
+                    app:cardCornerRadius="5dp">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#80FFFFFF"
+                        android:text="Add New"
+                        android:textAllCaps="false" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="140dp"
+                        android:text="            Tickets"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="#A8FFBB00"
+                    app:cardCornerRadius="5dp">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#80FFFFFF"
+                        android:text="Add New"
+                        android:textAllCaps="false" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="140dp"
+                        android:text="           Stadiums"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="#DEFF6F"
+                    app:cardCornerRadius="5dp">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#80FFFFFF"
+                        android:text="Add New"
+                        android:textAllCaps="false" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="140dp"
+                        android:text="           Teams"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
