@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Summary</string>
+    <string name="Title">Add Summary</string>
+    <string name="ID">Match ID</string>
+    <string name="dt">Date</string>
+    <string name="Stadium">Stadium</string>
+    <string name="t1">Team 1</string>
+    <string name="t2">Team 2</string>
+    <string name="WT">Winning Team</string>
+    <string name="com">Comment</string>
+    <string name="ts">Toss</string>
+    <string name="motm">Man of the Match</string>
+    <string name="Placeholder">Placeholder</string>
+    <string name="up">Update</string>
+    <string name="del">Delete</string>
+</resources>
