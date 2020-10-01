@@ -3,6 +3,7 @@ package com.example.teams;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,7 +44,13 @@ public class AdminAddNewTeam extends AppCompatActivity {
                 int WK = Integer.parseInt(NoOfWK.getText().toString());
 
                 Teams teams = new Teams(Tname,Cat,NoBats,NoBowler,NoAllR,WK);
+
                 DBHandlerT.insertTeam(teams);
+
+
+                //Intent intent = new Intent(AdminAddNewTeam.this,UserTeamCategoty.class);
+                //startActivity(intent);
+
             }
         });
     }

@@ -10,6 +10,7 @@
     android:paddingTop="8dp"
     android:paddingEnd="8dp"
     android:paddingRight="8dp">
+
     <ListView
         android:id="@+id/listTeam"
         android:layout_width="363dp"

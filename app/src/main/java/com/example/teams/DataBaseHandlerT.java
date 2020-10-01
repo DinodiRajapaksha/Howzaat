@@ -16,9 +16,10 @@ public class DataBaseHandlerT extends SQLiteOpenHelper {
 
     //DataBase Details
 
-    private static final int version = 1;
+    private static final int version = 2;
     private static final String DBName = "MADProjectT";
     private static final String TableName = "Teams";
+    private static final String TABLE_NAME_PLAYERPROFODI = "Player";
 
     // Column Names for Teams table
 
@@ -30,9 +31,90 @@ public class DataBaseHandlerT extends SQLiteOpenHelper {
     private static final String AllRounderNo = "AllRounderNo";
     private static final String WKNo = "WKNo";
 
+
+
     // column names for Player
 
-    private static final String PlayerId = "PlayerId";
+    private static final String PID = "PID";
+    private static final String PROFILE_IMAGE = "PROFILE_IMAGE";
+    private static final String PNAME= "PNAME";
+    private static final String AGE= "AGE";
+    private static final String TEAMS= "TEAMS";
+    private static final String ROLE= "ROLE";
+    private static final String BAT_MATCHES= "BAT_MATCHES";
+    private static final String BAT_INNINGS= "BAT_INNINGS";
+    private static final String NOTOUTS= "NOTOUTS";
+    private static final String RUNS= "RUNS";
+    private static final String BF= "BF";
+    private static final String HS= "HS";
+    private static final String BAT_AVE= "BAT_AVE";
+    private static final String BAT_SR= "BAT_SR";
+    private static final String SFIFTY= "SFIFTY";
+    private static final String SHUNDRED= "SHUNDRED";
+    private static final String BO_MATCHES= "BO_MATCHES";
+    private static final String BO_INNINGS= "BO_INNINGS";
+    private static final String BO_BALLS= "BO_BALLS";
+    private static final String BO_RUNS= "BO_RUNS";
+    private static final String WKTS= "WKTS";
+    private static final String BBM= "BBM";
+    private static final String BO_AVE= "BO_AVE";
+    private static final String ECON= "ECON";
+    private static final String SR= "SR";
+
+    // CREATE TABLE STATEMENT
+
+    String CREATE_TABLE = "CREATE TABLE " + TableName + " " +
+            "("
+            + TeamId + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + TeamName + " TEXT, "
+            + Category + " TEXT, "
+            + BatsmenNo + " INTEGER, "
+            + BowlerNo + " INTEGER, "
+            + AllRounderNo + " INTEGER, "
+            + WKNo + " INTEGER " +
+            ");" ;
+
+
+
+    // CREATE TABLE PLAYER
+
+    String PLAYERODI_TABLE_CREATE = "CREATE TABLE "+ TABLE_NAME_PLAYERPROFODI+" "+
+            "("
+            +PID+" INTEGER PRIMARY KEY "+" AUTOINCREMENT,"
+            //+PROFILE_IMAGE+ " BLOB,"
+            +PNAME+ " TEXT,"
+            +AGE+ " INTEGER,"
+            +TEAMS+ " TEXT,"
+            +ROLE+ " TEXT,"
+            +BAT_MATCHES+ " INTEGER,"
+            +BAT_INNINGS+ " INTEGER,"
+            +NOTOUTS+ " INTEGER,"
+            +RUNS+ " INTEGER,"
+            +BF+ " INTEGER,"
+            +HS+ " INTEGER,"
+            +BAT_AVE+ " FLOAT,"
+            +BAT_SR+ " FLOAT,"
+            +SFIFTY+ " FLOAT,"
+            +SHUNDRED+ " FLOAT,"
+            +BO_MATCHES+ " INTEGER,"
+            +BO_INNINGS+ " INTEGER,"
+            +BO_BALLS+ " INTEGER,"
+            +BO_RUNS+ " INTEGER,"
+            +WKTS+ " INTEGER,"
+            +BBM+ " INTEGER,"
+            +BO_AVE+ " FLOAT,"
+            +ECON+ " FLOAT,"
+            +SR+ " FLOAT"
+            +");";
+
+    // INSERT STATEMENT
+
+    String INSERT_PLAYER = "INSERT INTO " + TABLE_NAME_PLAYERPROFODI + "(PID,PNAME,AGE,TEAMS,ROLE,BAT_MATCHES,BAT_INNINGS,NOTOUTS,RUNS,BF,HS,BAT_AVE,BAT_SR,SFIFTY,SHUNDRED,BO_MATCHES,BO_INNINGS,BO_BALLS,BO_RUNS,WKTS,BBM,BO_AVE,ECON,SR)"
+            + "VALUES" + "('01','Dimuth Karunarathna','32','Sri Lanka','Captain','66','128','5','4524','9263','196','36.8','48.8','24','9','66','11','237','149','2','1/12','74.5','3.77','118.5'), " +
+            "('02','Lasith Malinga','37','Sri Lanka','Bowler','30','37','13','275','75','64','11.4','44.5','1','0','30','59','5209','3349','101','5/50','33.1','3.85','51.6')," +
+            "('03','Anjelo Mathews','37','Sri Lanka','All Rounder','30','37','13','275','75','64','11.4','44.5','1','0','30','59','5209','3349','101','5/50','33.1','3.85','51.6')," +
+            "('04','Thissara Perera','37','Sri Lanka','All Rounder','30','37','13','275','75','64','11.4','44.5','1','0','30','59','5209','3349','101','5/50','33.1','3.85','51.6');";
+
 
     public DataBaseHandlerT(@Nullable Context context) {
         super(context, DBName, null, version);
@@ -41,24 +123,16 @@ public class DataBaseHandlerT extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-            // CREATE TABLE STATEMENT
-
-            String CREATE_TABLE = "CREATE TABLE " + TableName + " " +
-                "("
-                + TeamId + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + TeamName + " TEXT, "
-                + Category + " TEXT, "
-                + BatsmenNo + " INTEGER, "
-                + BowlerNo + " INTEGER, "
-                + AllRounderNo + " INTEGER, "
-                + WKNo + " INTEGER " +
-                ");" ;
-
 
             // EXECUTE CREATE TABLE
 
             sqLiteDatabase.execSQL(CREATE_TABLE);
 
+            //EXECUTE PLAYER TABLE
+
+             sqLiteDatabase.execSQL(PLAYERODI_TABLE_CREATE);
+
+             sqLiteDatabase.execSQL(INSERT_PLAYER);
 
     }
 
@@ -69,10 +143,14 @@ public class DataBaseHandlerT extends SQLiteOpenHelper {
 
         String DROP_TABLE = "DROP TABLE IF EXISTS " + TableName;
 
+        String DROP_TABLE_PLAYER = "DROP TABLE IF EXISTS " + TABLE_NAME_PLAYERPROFODI;
+
 
         // EXECUTE DROP TABLE
 
         sqLiteDatabase.execSQL(DROP_TABLE);
+
+        sqLiteDatabase.execSQL(DROP_TABLE_PLAYER);
 
         // CREATE NEW TABLE
 
@@ -80,12 +158,13 @@ public class DataBaseHandlerT extends SQLiteOpenHelper {
 
     }
 
+
     public void insertTeam(Teams teams) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put(TeamId,teams.getTeamId());
+        //contentValues.put(TeamId,teams.getTeamId());
         contentValues.put(TeamName,teams.getTeamName());
         contentValues.put(Category,teams.getCategory());
         contentValues.put(BatsmenNo,teams.getBatsmenNo());
@@ -184,4 +263,58 @@ public class DataBaseHandlerT extends SQLiteOpenHelper {
         }
         return null;
     }
+
+    // SELECT ALL ITEMS IN PLAYER TABLE
+
+    public List<Player> getAllPlayers(){
+
+        List<Player> player = new ArrayList<>();
+
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+
+        String query = "SELECT * FROM "  + TABLE_NAME_PLAYERPROFODI;
+
+        Cursor cursor = sqLiteDatabase.rawQuery(query,null);
+
+        if(cursor.moveToFirst()){
+
+            do{
+                Player players = new Player();
+
+                players.setPid(cursor.getInt(0));
+                players.setName(cursor.getString(1));
+                players.setAge(cursor.getInt(2));
+                players.setTeams(cursor.getString(3));
+                players.setTmatches(cursor.getInt(4));
+                players.setTinnings(cursor.getInt(5));
+                players.setNotout(cursor.getInt(6));
+                players.setTruns(cursor.getInt(7));
+                players.setBf(cursor.getInt(8));
+                players.setHs(cursor.getInt(9));
+                players.setTaverage(cursor.getFloat(10));
+                players.setTsr(cursor.getFloat(11));
+                players.setS50(cursor.getInt(12));
+                players.setS100(cursor.getInt(13));
+                players.setBmatches(cursor.getInt(14));
+                players.setBinnings(cursor.getInt(15));
+                players.setBalls(cursor.getInt(16));
+                players.setBruns(cursor.getInt(17));
+                players.setWkts(cursor.getInt(18));
+                players.setBbm(cursor.getInt(19));
+                players.setBaverage(cursor.getFloat(20));
+                players.setEconomy(cursor.getFloat(21));
+                players.setBsr(cursor.getFloat(22));
+
+
+
+                 player.add(players);
+
+            }while(cursor.moveToNext());
+
+            return player;
+        }
+
+        return null;
+    }
+
 }
